@@ -24,15 +24,13 @@ app.get('/download', async (req, res) => {
 
         const { spawn } = require('child_process');
         
-        // STEALTH ARGS: Trick YouTube into thinking we are a mobile app
+        // Android client is the most reliable for bypassing bot-checks on cloud IPs
         const ls = spawn('yt-dlp', [
             '-o', '-', 
             '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
             '--no-playlist',
             '--no-check-certificates',
-            '--user-agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
-            '--referer', 'https://www.youtube.com/',
-            '--extractor-args', 'youtube:player-client=ios,android;player-skip=web_embedded,web',
+            '--extractor-args', 'youtube:player-client=android',
             videoUrl
         ]);
 
