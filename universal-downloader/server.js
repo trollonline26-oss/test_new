@@ -27,7 +27,7 @@ app.get('/download', async (req, res) => {
         // Android client is the most reliable for bypassing bot-checks on cloud IPs
         const ls = spawn('yt-dlp', [
             '-o', '-', 
-            '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
+            '-f', 'best[ext=mp4]', // Forces a single, compatible MP4 for QuickTime
             '--no-playlist',
             '--no-check-certificates',
             '--extractor-args', 'youtube:player-client=android',
