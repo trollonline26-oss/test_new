@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Downloader - Premium YT Video Downloader</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <h1 class="glitch-text">Universal<span>Downloader</span></h1>
+            <p class="subtitle">Download any YouTube video in stunning quality, instantly.</p>
+        </header>
+
+        <section class="downloader-card">
+            <div class="input-wrapper">
+                <input type="text" id="video-url" placeholder="Paste YouTube link here..." autocomplete="off">
+                <button id="download-btn">
+                    <span>Download</span>
+                    <div class="loader" id="btn-loader"></div>
+                </button>
+            </div>
+            
+            <div id="status-message" class="status-message"></div>
+            
+            <div class="progress-container" id="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <p id="progress-text">Preparing download...</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Universal Downloader. Built for high performance.</p>
+        </footer>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
